@@ -40,6 +40,11 @@ R10 du chapeau), ajouter le lien vitrine → portail.
 - `README.md` et `DEPLOY.md` (attention : DEPLOY.md décrit encore FormSubmit alors que
   le code utilise Web3Forms — correction tracée ROADMAP R10).
 - Vue d'ensemble : `~/voltigrid-main/docs/`.
+- **Identité visuelle** : vault, `~/vault/5-Output/Voltigrid/Charte graphique.md` (ADR 18/07,
+  logo « la pile ») ; assets dans `~/Freelance/02-Offre-Marketing/branding/` (repo
+  `watare/voltigrid-conseil`). Le CSS d'`index.html` doit rester aligné valeur par valeur.
+- **Flux site** : `~/Freelance/02-Offre-Marketing/site/` = atelier (Claude Desktop itère),
+  ce dépôt = déploiement (le CLI synchronise atelier → ici, relit le diff, push = mise en ligne).
 
 ## 6. Règle de maintenance
 

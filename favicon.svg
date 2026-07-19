@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="VOLTIGRID">
+  <rect x="1" y="1" width="62" height="62" rx="14" fill="#0E2336"/>
+  <g transform="translate(9.5,10) scale(1.25)"><path d="M18 22 L31 28.5 L18 35 L5 28.5 Z" fill="none" stroke="#51617A" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M18 15.5 L31 22 L18 28.5 L5 22 Z" fill="#0B7C71"/>
+    <path d="M4 9.5 Q 8 3.8 12 9.5 Q 13.6 11.8 15.2 9.5 L17.2 3.6 L19.2 13.4 L21 9.5 H32" fill="none" stroke="#FFFFFF" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="17.2" cy="3.6" r="2" fill="#E0A030"/></g>
+</svg>

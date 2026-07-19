@@ -1,33 +1,871 @@
 <!DOCTYPE html>
+<!-- VOLTIGRID landing page -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>VOLTIGRID · Digital substation, virtualised PAC and IT/OT validation</title>
-<meta name="description" content="Independent expertise on digital substation and virtualised protection, automation and control. Assessment, virtual test benches, POC demonstrators and remote virtual lab for grid operators, laboratories, vendors, data-centre builders and critical-infrastructure teams.">
+<title>VOLTIGRID · Digitalisation and virtualisation of substation protection, automation and control</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta name="description" content="Independent expertise on the digitalisation and virtualisation of substation protection, automation and control. Assessment, virtual test benches, POC demonstrators and remote virtual lab for TSOs and DSOs.">
 <style>
-:root{--navy:#0E2336;--teal:#11A294;--teal-dark:#0B7C71;--blue:#1E5A8A;--copper:#B87333;--amber:#E0A030;--slate:#51617A;--slate-light:#8A97A8;--panel:#EFF3F7;--border:#C9D5E2;--white:#FFFFFF}*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;color:var(--navy);background:var(--white);line-height:1.6;font-size:17px}.wrap{max-width:1080px;margin:0 auto;padding:0 24px}header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid var(--border);backdrop-filter:blur(6px)}.nav{display:flex;align-items:center;justify-content:space-between;height:68px}.logo{text-decoration:none}.nav-links{display:flex;gap:28px;align-items:center}.nav-links a{color:var(--slate);text-decoration:none;font-size:14.5px;font-weight:600;letter-spacing:.02em}.nav-links a:hover{color:var(--teal-dark)}.nav-cta{color:var(--white)!important;background:var(--teal-dark);padding:9px 18px;border-radius:6px}.nav-cta:hover{background:var(--teal);color:var(--white)!important}@media(max-width:760px){.nav-links a:not(.nav-cta){display:none}}.hero{padding:88px 0 72px}.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--teal-dark);border:1px solid var(--border);background:var(--panel);padding:6px 14px;border-radius:20px;margin-bottom:26px}h1{font-size:clamp(31px,4.8vw,50px);line-height:1.15;font-weight:750;letter-spacing:-.018em;max-width:870px}h1 .accent{color:var(--teal-dark)}.hero p{max-width:760px;margin-top:22px;color:var(--slate);font-size:19px}.hero-actions{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap}.btn{display:inline-block;text-decoration:none;font-weight:650;font-size:15.5px;padding:13px 26px;border-radius:7px;transition:background .15s,color .15s,border-color .15s}.btn-primary{background:var(--navy);color:var(--white)}.btn-primary:hover{background:var(--blue)}.btn-ghost{color:var(--navy);border:1.5px solid var(--border);background:var(--white)}.btn-ghost:hover{border-color:var(--teal-dark);color:var(--teal-dark)}.dims{background:var(--panel);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:52px 0}.dims-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}@media(max-width:820px){.dims-grid{grid-template-columns:1fr}}.dim h3{font-size:16.5px;margin-bottom:8px;display:flex;align-items:center;gap:9px}.dot{width:9px;height:9px;border-radius:50%;flex:none}.dim p{font-size:15px;color:var(--slate)}section{padding:76px 0}.sec-label{font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-dark);margin-bottom:10px}h2{font-size:clamp(24px,3vw,34px);font-weight:720;letter-spacing:-.01em;max-width:760px;line-height:1.25}.sec-intro{max-width:760px;margin-top:14px;color:var(--slate)}.markets{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}@media(max-width:900px){.markets{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.markets{grid-template-columns:1fr}}.market,.card{border:1px solid var(--border);border-radius:10px;background:var(--white);border-top:3px solid var(--card-accent,var(--teal))}.market{padding:22px 20px}.market h3{font-size:16px;margin-bottom:8px}.market p,.card p{color:var(--slate)}.market p{font-size:14.5px}.challenge{background:var(--panel);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.map{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}@media(max-width:960px){.map{grid-template-columns:repeat(2,1fr)}}@media(max-width:620px){.map{grid-template-columns:1fr}}.map-col{background:var(--white);border:1px solid var(--border);border-radius:10px;overflow:hidden}.map-col h3{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--white);padding:12px 16px;background:var(--navy)}.map-col ul{list-style:none;padding:12px 16px 16px}.map-col li{font-size:14px;color:var(--slate);padding:10px 0;border-bottom:1px dashed var(--border)}.map-col li:last-child{border-bottom:none}.map-col strong{display:block;color:var(--navy);font-size:14.5px;margin-bottom:2px}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:44px}@media(max-width:760px){.cards{grid-template-columns:1fr}}.card{padding:30px 28px;display:flex;flex-direction:column;gap:12px}.card .icon{width:46px;height:46px;border-radius:9px;background:var(--panel);display:flex;align-items:center;justify-content:center;flex:none}.card h3{font-size:18.5px}.badge-soon{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--copper);border:1px solid var(--copper);padding:3px 10px;border-radius:12px;vertical-align:middle;margin-left:8px;white-space:nowrap}.card p{font-size:15px}.card .use{margin-top:auto;padding-top:12px;border-top:1px dashed var(--border);font-size:13.5px;color:var(--slate-light)}.card .use strong{color:var(--slate);font-weight:650}.card-link{display:inline-flex;align-items:center;gap:6px;margin-top:2px;font-size:14px;font-weight:650;color:var(--teal-dark);background:none;border:none;cursor:pointer;font-family:inherit;padding:0;width:max-content}.card-link:hover{color:var(--teal);text-decoration:underline}.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:22px}.modal.open{display:flex}.modal-overlay{position:absolute;inset:0;background:rgba(14,35,54,.62);cursor:pointer}.modal-box{position:relative;background:var(--white);border-radius:12px;max-width:1080px;width:100%;max-height:92vh;overflow:auto;padding:32px 34px 24px;box-shadow:0 24px 64px rgba(14,35,54,.4)}#modal-poc .modal-box{max-width:680px}.modal-box h3{font-size:18px;margin-bottom:20px;padding-right:44px}.modal-box svg{width:100%;height:auto;display:block}.modal-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;border:1px solid var(--border);background:var(--white);cursor:pointer;font-size:18px;color:var(--slate);line-height:1;font-family:inherit}.modal-close:hover{color:var(--navy);border-color:var(--slate-light)}.diagram-caption{margin-top:18px;font-size:13.5px;color:var(--slate);line-height:1.7;border-top:1px dashed var(--border);padding-top:14px}.evidence{background:var(--navy);color:var(--white)}.evidence .sec-label{color:var(--amber)}.evidence h2{color:var(--white)}.evidence .sec-intro{color:rgba(255,255,255,.74)}.evidence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:40px}@media(max-width:820px){.evidence-grid{grid-template-columns:1fr}}.evidence-item{border:1px solid rgba(255,255,255,.16);border-radius:9px;padding:24px 22px;background:rgba(255,255,255,.04)}.evidence-item h3{font-size:16px;margin-bottom:8px;color:var(--amber)}.evidence-item p{font-size:14.5px;color:rgba(255,255,255,.78)}.evidence-note{margin-top:30px;font-size:14.5px;color:rgba(255,255,255,.65);max-width:760px}.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;margin-top:36px;align-items:start}@media(max-width:820px){.about-grid{grid-template-columns:1fr}}.about-text p{color:var(--slate);font-size:15.5px;margin-bottom:16px}.about-text p strong{color:var(--navy)}.track{background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:26px 24px}.track h3{font-size:14px;text-transform:uppercase;letter-spacing:.1em;color:var(--slate);margin-bottom:16px}.track ul{list-style:none}.track li{padding:9px 0;border-bottom:1px solid var(--border);font-size:14.5px;color:var(--navy);display:flex;gap:10px;align-items:baseline}.track li:last-child{border-bottom:none}.track li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal);flex:none;position:relative;top:-1px}.contact{background:var(--panel);border-top:1px solid var(--border)}.contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;margin-top:36px;align-items:start}@media(max-width:820px){.contact-grid{grid-template-columns:1fr}}.contact-side p{color:var(--slate);font-size:15.5px;margin-bottom:18px}.contact-side .direct{font-size:15px}.contact-side .direct a{color:var(--teal-dark);font-weight:650;text-decoration:none}.contact-side .direct a:hover{text-decoration:underline}form{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:30px 28px;display:flex;flex-direction:column;gap:18px}.field label{display:block;font-size:13.5px;font-weight:650;margin-bottom:6px;color:var(--navy)}.field input,.field textarea{width:100%;border:1px solid var(--border);border-radius:6px;padding:11px 13px;font-size:15px;font-family:inherit;color:var(--navy);background:var(--white)}.field input:focus,.field textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(17,162,148,.15)}.field textarea{min-height:130px;resize:vertical}.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}@media(max-width:560px){.row2{grid-template-columns:1fr}}form button{background:var(--teal-dark);color:var(--white);border:none;border-radius:7px;padding:13px 26px;font-size:15.5px;font-weight:650;cursor:pointer;font-family:inherit}form button:hover{background:var(--teal)}.form-note{font-size:12.5px;color:var(--slate-light)}footer{border-top:1px solid var(--border);padding:34px 0}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center}.foot p{font-size:13.5px;color:var(--slate-light)}.foot a{color:var(--slate);text-decoration:none}.foot a:hover{color:var(--teal-dark)}
+  :root{
+    --navy:#0E2336;
+    --teal:#11A294;
+    --teal-dark:#0B7C71;
+    --blue:#1E5A8A;
+    --copper:#B87333;
+    --amber:#E0A030;
+    --slate:#51617A;
+    --slate-light:#8A97A8;
+    --panel:#EFF3F7;
+    --border:#C9D5E2;
+    --white:#FFFFFF;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+    color:var(--navy);
+    background:var(--white);
+    line-height:1.6;
+    font-size:17px;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.96);
+    border-bottom:1px solid var(--border);
+    backdrop-filter:blur(6px);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px;}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+  .nav-links{display:flex;gap:28px;align-items:center;}
+  .nav-links a{
+    color:var(--slate);text-decoration:none;font-size:14.5px;font-weight:600;
+    letter-spacing:.02em;
+  }
+  .nav-links a:hover{color:var(--teal-dark);}
+  .nav-cta{
+    color:var(--white)!important;background:var(--teal-dark);
+    padding:9px 18px;border-radius:6px;
+  }
+  .nav-cta:hover{background:var(--teal);color:var(--white)!important;}
+  @media(max-width:760px){.nav-links a:not(.nav-cta){display:none;}}
+
+  /* ---------- Hero ---------- */
+  .hero{padding:88px 0 72px;}
+  .eyebrow{
+    display:inline-block;font-size:13px;font-weight:700;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--teal-dark);
+    border:1px solid var(--border);background:var(--panel);
+    padding:6px 14px;border-radius:20px;margin-bottom:26px;
+  }
+  h1{
+    font-size:clamp(30px,4.6vw,46px);line-height:1.18;font-weight:750;
+    letter-spacing:-.015em;max-width:800px;
+  }
+  h1 .accent{color:var(--teal-dark);}
+  .hero p{max-width:680px;margin-top:22px;color:var(--slate);font-size:19px;}
+  .hero-actions{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;}
+  .btn{
+    display:inline-block;text-decoration:none;font-weight:650;font-size:15.5px;
+    padding:13px 26px;border-radius:7px;transition:background .15s,color .15s;
+  }
+  .btn-primary{background:var(--navy);color:var(--white);}
+  .btn-primary:hover{background:var(--blue);}
+  .btn-ghost{color:var(--navy);border:1.5px solid var(--border);background:var(--white);}
+  .btn-ghost:hover{border-color:var(--teal-dark);color:var(--teal-dark);}
+
+  /* ---------- Dimensions strip ---------- */
+  .dims{background:var(--panel);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:52px 0;}
+  .dims-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;}
+  @media(max-width:820px){.dims-grid{grid-template-columns:1fr;}}
+  .dim h3{font-size:16.5px;margin-bottom:8px;display:flex;align-items:center;gap:9px;}
+  .dim h3 .dot{width:9px;height:9px;border-radius:50%;flex:none;}
+  .dim p{font-size:15px;color:var(--slate);}
+
+  /* ---------- Sections ---------- */
+  section{padding:76px 0;}
+  .sec-label{
+    font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--teal-dark);margin-bottom:10px;
+  }
+  h2{font-size:clamp(24px,3vw,32px);font-weight:720;letter-spacing:-.01em;max-width:720px;}
+  .sec-intro{max-width:680px;margin-top:14px;color:var(--slate);}
+
+  /* ---------- Schemas ---------- */
+  .schema{
+    margin-top:44px;background:var(--white);border:1px solid var(--border);
+    border-radius:10px;padding:30px 28px 22px;
+  }
+  .schema h3{font-size:17px;margin-bottom:20px;}
+  .schema svg{width:100%;height:auto;display:block;}
+  .schema-caption{
+    margin-top:18px;font-size:13.5px;color:var(--slate);line-height:1.7;
+    border-top:1px dashed var(--border);padding-top:14px;
+  }
+  .schema-caption .n{
+    display:inline-block;width:18px;height:18px;border-radius:50%;
+    background:var(--navy);color:var(--white);font-size:11px;font-weight:700;
+    text-align:center;line-height:18px;margin:0 3px 0 8px;
+  }
+  .schema-caption .n:first-child{margin-left:0;}
+  .card-diagram{
+    background:var(--panel);border:1px solid var(--border);border-radius:8px;
+    padding:10px 12px;
+  }
+  .card-diagram svg{width:100%;height:auto;display:block;}
+  .card-link{
+    display:inline-flex;align-items:center;gap:6px;margin-top:10px;
+    font-size:14px;font-weight:650;color:var(--teal-dark);
+    background:none;border:none;cursor:pointer;font-family:inherit;padding:0;
+  }
+  .card-link:hover{color:var(--teal);text-decoration:underline;}
+  .map-cta{
+    margin-top:36px;background:var(--white);border:1px solid var(--border);border-radius:10px;
+    padding:26px 28px;display:flex;justify-content:space-between;align-items:center;gap:22px;flex-wrap:wrap;
+  }
+  .map-cta p{color:var(--slate);font-size:15px;max-width:600px;}
+  button.btn{border:none;cursor:pointer;font-family:inherit;}
+
+  /* ---------- Modals ---------- */
+  .modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:22px;}
+  .modal.open{display:flex;}
+  .modal-overlay{position:absolute;inset:0;background:rgba(14,35,54,.62);cursor:pointer;}
+  .modal-box{
+    position:relative;background:var(--white);border-radius:12px;
+    max-width:1080px;width:100%;max-height:92vh;overflow:auto;
+    padding:32px 34px 24px;box-shadow:0 24px 64px rgba(14,35,54,.4);
+  }
+  #modal-poc .modal-box{max-width:680px;}
+  .modal-box>h3{font-size:18px;margin-bottom:20px;padding-right:44px;}
+  .modal-box svg{width:100%;height:auto;display:block;}
+  .modal-box .schema{margin-top:0;border:none;padding:0;}
+  .modal-close{
+    position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;
+    border:1px solid var(--border);background:var(--white);cursor:pointer;
+    font-size:18px;color:var(--slate);line-height:1;font-family:inherit;
+  }
+  .modal-close:hover{color:var(--navy);border-color:var(--slate-light);}
+
+  /* ---------- Use cases ---------- */
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:44px;}
+  @media(max-width:760px){.cards{grid-template-columns:1fr;}}
+  .card{
+    background:var(--white);border:1px solid var(--border);border-radius:10px;
+    padding:30px 28px;display:flex;flex-direction:column;gap:12px;
+    border-top:3px solid var(--card-accent,var(--teal));
+  }
+  .card .icon{
+    width:46px;height:46px;border-radius:9px;background:var(--panel);
+    display:flex;align-items:center;justify-content:center;flex:none;
+  }
+  .card h3{font-size:18.5px;}
+  .badge-soon{
+    display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--copper);border:1px solid var(--copper);
+    padding:3px 10px;border-radius:12px;vertical-align:middle;margin-left:8px;white-space:nowrap;
+  }
+  .card p{font-size:15px;color:var(--slate);}
+  .card .use{
+    margin-top:auto;padding-top:12px;border-top:1px dashed var(--border);
+    font-size:13.5px;color:var(--slate-light);
+  }
+  .card .use strong{color:var(--slate);font-weight:650;}
+
+  /* ---------- Scope ---------- */
+  .scope{background:var(--navy);color:var(--white);}
+  .scope .sec-label{color:var(--amber);}
+  .scope h2{color:var(--white);}
+  .scope-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:40px;}
+  @media(max-width:820px){.scope-grid{grid-template-columns:1fr;}}
+  .scope-item{
+    border:1px solid rgba(255,255,255,.16);border-radius:9px;padding:24px 22px;
+    background:rgba(255,255,255,.04);
+  }
+  .scope-item h3{font-size:16px;margin-bottom:8px;color:var(--amber);}
+  .scope-item p{font-size:14.5px;color:rgba(255,255,255,.78);}
+  .scope-note{margin-top:30px;font-size:14.5px;color:rgba(255,255,255,.6);max-width:640px;}
+
+  /* ---------- About ---------- */
+  .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;margin-top:36px;align-items:start;}
+  @media(max-width:820px){.about-grid{grid-template-columns:1fr;}}
+  .about-text p{color:var(--slate);font-size:15.5px;margin-bottom:16px;}
+  .about-text p strong{color:var(--navy);}
+  .track{
+    background:var(--panel);border:1px solid var(--border);border-radius:10px;padding:26px 24px;
+  }
+  .track h3{font-size:14px;text-transform:uppercase;letter-spacing:.1em;color:var(--slate);margin-bottom:16px;}
+  .track ul{list-style:none;}
+  .track li{
+    padding:9px 0;border-bottom:1px solid var(--border);font-size:14.5px;color:var(--navy);
+    display:flex;gap:10px;align-items:baseline;
+  }
+  .track li:last-child{border-bottom:none;}
+  .track li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal);flex:none;position:relative;top:-1px;}
+
+  /* ---------- Contact ---------- */
+  .contact{background:var(--panel);border-top:1px solid var(--border);}
+  .contact-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;margin-top:36px;align-items:start;}
+  @media(max-width:820px){.contact-grid{grid-template-columns:1fr;}}
+  .contact-side p{color:var(--slate);font-size:15.5px;margin-bottom:18px;}
+  .contact-side .direct{font-size:15px;}
+  .contact-side .direct a{color:var(--teal-dark);font-weight:650;text-decoration:none;}
+  .contact-side .direct a:hover{text-decoration:underline;}
+  form{
+    background:var(--white);border:1px solid var(--border);border-radius:10px;
+    padding:30px 28px;display:flex;flex-direction:column;gap:18px;
+  }
+  .field label{display:block;font-size:13.5px;font-weight:650;margin-bottom:6px;color:var(--navy);}
+  .field input,.field textarea{
+    width:100%;border:1px solid var(--border);border-radius:6px;
+    padding:11px 13px;font-size:15px;font-family:inherit;color:var(--navy);
+    background:var(--white);
+  }
+  .field input:focus,.field textarea:focus{
+    outline:none;border-color:var(--teal);box-shadow:0 0 0 3px rgba(17,162,148,.15);
+  }
+  .field textarea{min-height:130px;resize:vertical;}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  @media(max-width:560px){.row2{grid-template-columns:1fr;}}
+  form button{
+    background:var(--teal-dark);color:var(--white);border:none;border-radius:7px;
+    padding:13px 26px;font-size:15.5px;font-weight:650;cursor:pointer;font-family:inherit;
+  }
+  form button:hover{background:var(--teal);}
+  .form-note{font-size:12.5px;color:var(--slate-light);}
+
+  /* ---------- Footer ---------- */
+  footer{border-top:1px solid var(--border);padding:34px 0;}
+  .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:center;}
+  .foot p{font-size:13.5px;color:var(--slate-light);}
+  .foot a{color:var(--slate);text-decoration:none;}
+  .foot a:hover{color:var(--teal-dark);}
 </style>
 </head>
 <body>
-<header><div class="wrap nav"><a class="logo" href="#top" aria-label="VOLTIGRID home"><svg width="196" height="34" viewBox="0 0 196 34" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VOLTIGRID"><rect x="1.5" y="1.5" width="31" height="31" rx="7" fill="#0E2336"/><polyline points="8,13 14,13 17,7 20,21 23,13 26,13" fill="none" stroke="#11A294" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><line x1="8" y1="26" x2="26" y2="26" stroke="#8A97A8" stroke-width="2" stroke-linecap="round" stroke-dasharray="3.2 3.4"/><text x="42" y="24" font-family="'Segoe UI',-apple-system,Arial,sans-serif" font-size="19" font-weight="750" letter-spacing="1.5" fill="#0E2336">VOLTI<tspan fill="#0B7C71">GRID</tspan></text></svg></a><nav class="nav-links"><a href="#markets">Who it helps</a><a href="#challenge">The challenge</a><a href="#use-cases">Use cases</a><a href="#about">About</a><a class="nav-cta" href="#contact">Contact</a></nav></div></header>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="VOLTIGRID home">
+      <!-- VOLTIGRID wordmark -->
+      <svg width="159" height="34" viewBox="0 0 168.6 36" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="VOLTIGRID">
+        <!-- mark: virtualisation layers, protection signal above (fault detected, cleared) -->
+        <path d="M18 22 L31 28.5 L18 35 L5 28.5 Z" fill="none" stroke="#8A97A8" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M18 15.5 L31 22 L18 28.5 L5 22 Z" fill="#0E2336"/>
+    <path d="M4 9.5 Q 8 3.8 12 9.5 Q 13.6 11.8 15.2 9.5 L17.2 3.6 L19.2 13.4 L21 9.5 H32" fill="none" stroke="#11A294" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="17.2" cy="3.6" r="2" fill="#E0A030"/>
+    <path d="M50.312 25.8 46.396 10.400000000000002H49.388L52.644 23.93H52.952L56.208 10.400000000000002H59.2L55.284 25.8Z" fill="#0E2336"/>
+    <path d="M68.352 26.108Q65.448 26.108 63.732 24.512999999999998Q62.016 22.918 62.016 19.948V16.252000000000002Q62.016 13.282000000000002 63.732 11.687000000000001Q65.448 10.092000000000002 68.352 10.092000000000002Q71.256 10.092000000000002 72.972 11.687000000000001Q74.68799999999999 13.282000000000002 74.68799999999999 16.252000000000002V19.948Q74.68799999999999 22.918 72.972 24.512999999999998Q71.256 26.108 68.352 26.108ZM68.352 23.512Q69.97999999999999 23.512 70.88199999999999 22.566000000000003Q71.78399999999999 21.62 71.78399999999999 20.036V16.164Q71.78399999999999 14.580000000000002 70.88199999999999 13.634Q69.97999999999999 12.688 68.352 12.688Q66.746 12.688 65.833 13.634Q64.92 14.580000000000002 64.92 16.164V20.036Q64.92 21.62 65.833 22.566000000000003Q66.746 23.512 68.352 23.512Z" fill="#0E2336"/>
+    <path d="M78.56 25.8V10.400000000000002H81.464V23.16H88.504V25.8Z" fill="#0E2336"/>
+    <path d="M95.36800000000001 25.8V13.040000000000001H90.88000000000001V10.400000000000002H102.76V13.040000000000001H98.272V25.8Z" fill="#0E2336"/>
+    <path d="M106.06 25.8V10.400000000000002H108.964V25.8Z" fill="#0E2336"/>
+    <path d="M118.512 26.108Q116.928 26.108 115.64099999999999 25.393Q114.354 24.678 113.595 23.303Q112.836 21.928 112.836 19.948V16.252000000000002Q112.836 13.282000000000002 114.50800000000001 11.687000000000001Q116.18 10.092000000000002 119.04 10.092000000000002Q121.878 10.092000000000002 123.429 11.599000000000002Q124.98 13.106000000000002 124.98 15.680000000000001V15.768H122.12V15.592Q122.12 14.778 121.779 14.118000000000002Q121.438 13.458000000000002 120.756 13.073Q120.074 12.688 119.04 12.688Q117.5 12.688 116.62 13.634Q115.74000000000001 14.580000000000002 115.74000000000001 16.208000000000002V19.992Q115.74000000000001 21.598 116.62 22.576999999999998Q117.5 23.556 119.084 23.556Q120.668 23.556 121.394 22.72Q122.12 21.884 122.12 20.608V20.388H118.468V17.924H124.98V25.8H122.296V24.326H121.9Q121.74600000000001 24.7 121.405 25.118000000000002Q121.06400000000001 25.536 120.382 25.822000000000003Q119.7 26.108 118.512 26.108Z" fill="#0B7C71"/>
+    <path d="M129.072 25.8V10.400000000000002H135.76Q137.212 10.400000000000002 138.29 10.906000000000002Q139.368 11.412 139.962 12.336000000000002Q140.556 13.260000000000002 140.556 14.514000000000001V14.778Q140.556 16.164 139.89600000000002 17.022000000000002Q139.236 17.880000000000003 138.268 18.276000000000003V18.672Q139.148 18.716 139.632 19.277Q140.116 19.838 140.116 20.762V25.8H137.212V21.18Q137.212 20.652 136.937 20.322000000000003Q136.662 19.992 136.024 19.992H131.976V25.8ZM131.976 17.352H135.452Q136.486 17.352 137.06900000000002 16.791Q137.65200000000002 16.23 137.65200000000002 15.306000000000001V15.086000000000002Q137.65200000000002 14.162 137.08 13.601Q136.508 13.040000000000001 135.452 13.040000000000001H131.976Z" fill="#0B7C71"/>
+    <path d="M144.296 25.8V10.400000000000002H147.2V25.8Z" fill="#0B7C71"/>
+    <path d="M150.98399999999998 25.8V23.248H153.00799999999998V12.952000000000002H150.98399999999998V10.400000000000002H157.32Q160.42199999999997 10.400000000000002 162.039 11.973000000000003Q163.65599999999998 13.546000000000001 163.65599999999998 16.648000000000003V19.552Q163.65599999999998 22.654 162.039 24.227Q160.42199999999997 25.8 157.32 25.8ZM155.91199999999998 23.16H157.36399999999998Q159.12399999999997 23.16 159.938 22.236Q160.75199999999998 21.312 160.75199999999998 19.64V16.560000000000002Q160.75199999999998 14.866000000000001 159.938 13.953000000000001Q159.12399999999997 13.040000000000001 157.36399999999998 13.040000000000001H155.91199999999998Z" fill="#0B7C71"/>
+      </svg>
+    </a>
+    <nav class="nav-links">
+      <a href="#challenge">The challenge</a>
+      <a href="#use-cases">Use cases</a>
+      <a href="#scope">Scope</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
 <main id="top">
-<div class="hero"><div class="wrap"><span class="eyebrow">Independent expertise · Digital substation · Virtualised PAC · IT/OT validation</span><h1>Evaluate digital substation and <span class="accent">virtualised protection, automation and control</span> before you commit.</h1><p>VOLTIGRID helps organisations working on critical power-system infrastructure clarify their next commitment: strategic vision, IT/OT operating model and evidence-based validation. Independent, hands-on, grounded in systems running in production.</p><div class="hero-actions"><a class="btn btn-primary" href="#contact">Discuss your programme</a><a class="btn btn-ghost" href="#use-cases">See use cases</a></div></div></div>
-<div class="dims"><div class="wrap dims-grid"><div class="dim"><h3><span class="dot" style="background:var(--teal)"></span>Expertise &amp; arbitration</h3><p>Neutral evaluation of architectures, vendor claims and integrator proposals at the IT/OT boundary, where few organisations hold the full competence internally.</p></div><div class="dim"><h3><span class="dot" style="background:var(--blue)"></span>Proof by demonstration</h3><p>POCs and virtual test benches that turn open questions and hearsay into measured, documented answers before any field or programme commitment.</p></div><div class="dim"><h3><span class="dot" style="background:var(--copper)"></span>Organisation &amp; adoption</h3><p>Support for teams whose structure was built on the IT/OT separation, as the technology crosses that boundary and reshapes responsibilities.</p></div></div></div>
-<section id="markets"><div class="wrap"><div class="sec-label">Who it helps</div><h2>For critical power-system infrastructure players, not only grid operators</h2><p class="sec-intro">The same questions appear wherever protection, automation, control, telecoms, industrial IT and cybersecurity have to converge around a digital or virtualised electrical infrastructure.</p><div class="markets"><div class="market" style="--card-accent:var(--teal)"><h3>Transmission &amp; distribution operators</h3><p>Clarify roadmap, qualification strategy, IT/OT operating model and build-to-run implications.</p></div><div class="market" style="--card-accent:var(--blue)"><h3>Laboratories &amp; test centres</h3><p>Structure neutral reference environments, VHIL campaigns, capture/replay methods and repeatable validation evidence.</p></div><div class="market" style="--card-accent:var(--copper)"><h3>Vendors &amp; integrators</h3><p>Challenge architectures, prepare demonstrations, test claims and align solutions with operator-grade constraints.</p></div><div class="market" style="--card-accent:var(--amber)"><h3>Data-centre builders &amp; operators</h3><p>Assess digital protection, automation, redundancy, observability and validation for critical electrical supply infrastructure.</p></div><div class="market" style="--card-accent:var(--teal-dark)"><h3>Industrial infrastructure teams</h3><p>Evaluate where virtualisation and digital PAC make sense when availability, maintainability and cyber rules are non-negotiable.</p></div><div class="market" style="--card-accent:var(--navy)"><h3>R&amp;D and innovation programmes</h3><p>Move from concept and slides to working objects, measurable behaviour and a decision path.</p></div></div></div></section>
-<section class="challenge" id="challenge"><div class="wrap"><div class="sec-label">The challenge</div><h2>Digitalisation lands between electrical engineering, industrial IT and operations</h2><p class="sec-intro">When protection, automation and control go digital and virtual, the impact is not confined to one team. Questions open up across electrical engineering, automation, telecoms, cybersecurity, IT, operations and validation — and many of them have no natural owner.</p><div class="map"><div class="map-col"><h3 style="background:var(--blue)">Plan &amp; decide</h3><ul><li><strong>Strategy</strong>What should be virtualised, and why now?</li><li><strong>Business case</strong>Where does value sit: CAPEX, OPEX, risk or speed?</li><li><strong>Procurement</strong>Which tests and open interfaces must be required before award?</li></ul></div><div class="map-col"><h3 style="background:var(--copper)">Design &amp; build</h3><ul><li><strong>Engineering</strong>Is the reference design ready for software-defined PAC?</li><li><strong>Protection</strong>Who proves timing and selectivity for a virtualised chain?</li><li><strong>Telecoms</strong>Who sizes process bus, redundancy and time synchronisation?</li></ul></div><div class="map-col"><h3 style="background:#7E4FB0">Systems &amp; data</h3><ul><li><strong>Industrial IT</strong>Who owns the IT/OT platform and lifecycle?</li><li><strong>Cybersecurity</strong>What does approving a hypervisor, VM or remote lab mean?</li><li><strong>Data</strong>Which operational use cases consume the new observability?</li></ul></div><div class="map-col"><h3 style="background:#2A8560">Operate &amp; maintain</h3><ul><li><strong>Operations</strong>How is non-regression proven before commissioning?</li><li><strong>Maintenance</strong>How are versions, patches and rollback handled in the field?</li><li><strong>Skills</strong>How does the organisation avoid a two-expert bottleneck?</li></ul></div></div></div></section>
-<section id="use-cases"><div class="wrap"><div class="sec-label">Use cases</div><h2>From open question to documented answer</h2><p class="sec-intro">Typical engagements for teams that need evidence before committing: operators, laboratories, vendors, integrators, data-centre builders and industrial critical-infrastructure programmes.</p><div class="cards">
-<div class="card" style="--card-accent:var(--teal)"><div class="icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="4" width="22" height="14" rx="2" stroke="#0B7C71" stroke-width="1.8"/><polyline points="6,11 9,11 11,7 13,15 15,11 20,11" stroke="#11A294" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><line x1="9" y1="22" x2="17" y2="22" stroke="#51617A" stroke-width="1.8" stroke-linecap="round"/><line x1="13" y1="18" x2="13" y2="22" stroke="#51617A" stroke-width="1.8"/></svg></div><h3>Virtual test bench (VHIL)</h3><p>Real protection functions exercised against dynamic, real-time network scenarios: faults, topology changes, degraded modes. The behaviour of a virtualised protection chain is observed and measured, not assumed.</p><p class="use"><strong>Typical use:</strong> validating timing, behaviour and non-regression before qualification or deployment.</p><button class="card-link" data-modal="modal-testbench">View the test bench diagram &#8594;</button></div>
-<div class="card" style="--card-accent:var(--blue)"><div class="icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3" y="3" width="9" height="9" rx="1.5" stroke="#1E5A8A" stroke-width="1.8"/><rect x="14" y="3" width="9" height="9" rx="1.5" stroke="#1E5A8A" stroke-width="1.8"/><rect x="3" y="14" width="9" height="9" rx="1.5" stroke="#1E5A8A" stroke-width="1.8"/><rect x="14" y="14" width="9" height="9" rx="1.5" stroke="#11A294" stroke-width="1.8" fill="#EFF3F7"/></svg></div><h3>Remote virtual lab <span class="badge-soon">In development · available soon</span></h3><p>A ready-to-use, SEAPATH-based environment available by subscription. Teams build familiarity with virtualised control and protection, run qualification campaigns and non-regression tests, without opening their own IT/OT perimeter.</p><p class="use"><strong>Typical use:</strong> building competence, testing vendor packages or benchmarking architectures against a neutral reference.</p></div>
-<div class="card" style="--card-accent:var(--copper)"><div class="icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 22 L4 14 M10 22 L10 9 M16 22 L16 12 M22 22 L22 5" stroke="#B87333" stroke-width="2.2" stroke-linecap="round"/><path d="M3 24 L23 24" stroke="#51617A" stroke-width="1.8" stroke-linecap="round"/></svg></div><h3>Assessment &amp; roadmap</h3><p>An independent evaluation of where a digitalisation or virtualisation programme actually stands: technology, competences, organisation and decision gates.</p><p class="use"><strong>Typical use:</strong> a programme that has investigated for years without converging toward a defensible commitment.</p></div>
-<div class="card" style="--card-accent:var(--amber)"><div class="icon"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="13" r="9.5" stroke="#E0A030" stroke-width="1.8"/><circle cx="13" cy="13" r="4.5" stroke="#0B7C71" stroke-width="1.8"/><circle cx="13" cy="13" r="1.4" fill="#0E2336"/></svg></div><h3>POC demonstrator</h3><p>A targeted proof of concept combining virtualised protection, SEAPATH, IEC 61850 data and network simulation, built to answer the specific questions blocking a decision.</p><p class="use"><strong>Typical use:</strong> settling a disputed technical claim with a working demonstration instead of another study.</p><button class="card-link" data-modal="modal-poc">View an example &#8594;</button></div>
-</div></div></section>
-<section class="evidence" id="evidence"><div class="wrap"><div class="sec-label">Scope</div><h2>Evidence before commitment</h2><p class="sec-intro">VOLTIGRID does not replace your integrator, vendor or internal decision owner. The role is to evaluate, demonstrate and challenge before the next commitment is made.</p><div class="evidence-grid"><div class="evidence-item"><h3>No delivery ownership</h3><p>Delivery remains with your vendor, integrator or internal team. VOLTIGRID clarifies what must be proven before delivery scales.</p></div><div class="evidence-item"><h3>No decision ownership</h3><p>The engagements instruct a decision: they make it decidable. The GO itself, and the deployment that follows, remain yours.</p></div><div class="evidence-item"><h3>No vendor ties</h3><p>No commercial affiliation with any vendor or integrator. Independence is the basis of the neutrality the evaluations rely on.</p></div></div><p class="evidence-note">Protection is not ordinary IT. Its safety cannot be formally proven; it is constructed through iso-risk architectures, defence in depth and disciplined validation. Where proof is out of reach, hands-on testing is what bounds the risk.</p></div></section>
-<section id="about"><div class="wrap"><div class="sec-label">About</div><h2>Built by someone who has done it</h2><div class="about-grid"><div class="about-text"><p>VOLTIGRID is an independent, single-expert practice. The career behind it covers the full arc of the technology: system operation as a dispatcher, protection engineering, European studies on the impact of renewables on protection schemes, then the digitalisation and virtualisation of control and protection at RTE, the French transmission system operator.</p><p>Its founder co-initiated <strong>SEAPATH</strong>, the LF Energy open source real-time virtualisation platform on which RTE's in-service substation control systems now run, and launched the virtualisation work within <strong>R#SPACE</strong>, RTE's 100% digital, multi-vendor protection, automation and control programme.</p><p>Years spent alongside operators, engineering teams and industrial digital-substation programmes showed the same pattern everywhere: the technology is maturing faster than the competence and the organisation needed to evaluate it. VOLTIGRID exists to close that gap, from the outside, as a neutral party.</p></div><div class="track"><h3>Track record</h3><ul><li>Co-initiator of SEAPATH (LF Energy)</li><li>Virtualisation lead within R#SPACE at RTE</li><li>Real-time Linux and software PLCs introduced into substation control</li><li>Protection engineering and renewables impact studies</li><li>Digital leadership and adoption programmes with operators worldwide</li></ul></div></div></div></section>
-<section class="contact" id="contact"><div class="wrap"><div class="sec-label">Contact</div><h2>Discuss how this applies to your programme</h2><div class="contact-grid"><div class="contact-side"><p>Whether your programme is at the exploration stage or has been investigating for some time, a short exchange is usually enough to see whether an engagement makes sense. No obligation follows from asking.</p><p class="direct">Direct email: <a href="mailto:contact@voltigrid.com">contact@voltigrid.com</a></p></div><form action="https://api.web3forms.com/submit" method="POST"><input type="hidden" name="access_key" value="988bedcc-d049-4e0f-9885-8eaca17a37b6"><input type="hidden" name="subject" value="New enquiry via voltigrid.com"><input type="hidden" name="from_name" value="voltigrid.com"><input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off"><div class="row2"><div class="field"><label for="f-name">Name</label><input id="f-name" type="text" name="name" required autocomplete="name"></div><div class="field"><label for="f-org">Organisation</label><input id="f-org" type="text" name="organisation" autocomplete="organization"></div></div><div class="field"><label for="f-email">Email</label><input id="f-email" type="email" name="email" required autocomplete="email"></div><div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required placeholder="A few lines on your context and what you are trying to evaluate."></textarea></div><button type="submit">Send message</button><p class="form-note">Your message goes directly to contact@voltigrid.com. Nothing else is done with your data.</p></form></div></div></section>
-<div class="modal" id="modal-testbench" role="dialog" aria-modal="true" aria-label="VHIL test bench diagram"><div class="modal-overlay" data-close></div><div class="modal-box"><button class="modal-close" data-close aria-label="Close">&#215;</button><h3>The VHIL test bench, closed loop</h3><svg viewBox="0 0 1000 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Closed-loop VHIL test bench"><defs><marker id="ar-blue" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 Z" fill="#1E5A8A"/></marker><marker id="ar-red" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0,0 L8,4.5 L0,9 Z" fill="#C03A4E"/></marker></defs><rect x="50" y="60" width="270" height="168" rx="10" fill="#EAF0F7" stroke="#C9D5E2" stroke-width="1.5"/><text x="70" y="92" font-size="16" font-weight="700" fill="#0E2336">Real-time grid simulation</text><text x="70" y="114" font-size="12.5" fill="#51617A">Dynamic network model</text><text x="70" y="132" font-size="12.5" fill="#51617A">Faults · switching · degraded modes</text><polyline points="70,190 90,190 100,164 112,208 124,178 136,196 150,190 170,190 180,168 192,204 204,182 216,194 230,190 300,190" fill="none" stroke="#1E5A8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="60" r="13" fill="#0E2336"/><text x="50" y="65" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text><circle cx="320" cy="228" r="13" fill="#0E2336"/><text x="320" y="233" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text><rect x="688" y="60" width="270" height="176" rx="10" fill="#DCEEEB" stroke="#9CCFC8" stroke-width="1.5" transform="translate(8,8)"/><rect x="680" y="52" width="270" height="176" rx="10" fill="#E7F6F4" stroke="#0B7C71" stroke-width="1.8"/><text x="700" y="82" font-size="16" font-weight="700" fill="#0B7C71">SEAPATH real-time server</text><rect x="855" y="62" width="82" height="22" rx="11" fill="none" stroke="#0B7C71" stroke-width="1.2"/><text x="896" y="77" font-size="11" font-weight="650" fill="#0B7C71" text-anchor="middle">redundant</text><rect x="700" y="100" width="230" height="40" rx="6" fill="#C03A4E"/><text x="715" y="125" font-size="13.5" font-weight="650" fill="#FFFFFF">Protection · virtualised (VM)</text><rect x="700" y="150" width="230" height="34" rx="6" fill="#C77A1E"/><text x="715" y="172" font-size="13" font-weight="650" fill="#FFFFFF">Automation (VM)</text><circle cx="680" cy="52" r="13" fill="#0E2336"/><text x="680" y="57" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text><line x1="80" y1="296" x2="930" y2="296" stroke="#1E5A8A" stroke-width="3"/><line x1="80" y1="305" x2="930" y2="305" stroke="#1E5A8A" stroke-width="3" opacity="0.45"/><text x="505" y="288" font-size="12.5" font-weight="650" fill="#1E5A8A" text-anchor="middle">Redundant process bus · Sampled Values + GOOSE</text><line x1="185" y1="228" x2="185" y2="296" stroke="#51617A" stroke-width="1.8"/><rect x="180" y="291" width="10" height="10" fill="#1E5A8A"/><line x1="815" y1="236" x2="815" y2="296" stroke="#51617A" stroke-width="1.8"/><rect x="810" y="291" width="10" height="10" fill="#1E5A8A"/><line x1="230" y1="262" x2="770" y2="262" stroke="#1E5A8A" stroke-width="2" marker-end="url(#ar-blue)"/><text x="500" y="255" font-size="12.5" font-weight="650" fill="#1E5A8A" text-anchor="middle">Sampled Values (measurements)</text><circle cx="252" cy="262" r="12" fill="#0E2336"/><text x="252" y="266.5" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text><line x1="770" y1="336" x2="230" y2="336" stroke="#C03A4E" stroke-width="2" marker-end="url(#ar-red)"/><text x="500" y="357" font-size="12.5" font-weight="650" fill="#C03A4E" text-anchor="middle">GOOSE (trip command)</text><circle cx="748" cy="336" r="12" fill="#0E2336"/><text x="748" y="340.5" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text><line x1="505" y1="305" x2="505" y2="386" stroke="#51617A" stroke-width="1.8" stroke-dasharray="4 4"/><rect x="385" y="386" width="240" height="60" rx="9" fill="#FDF3E3" stroke="#E0A030" stroke-width="1.6"/><text x="505" y="412" font-size="14.5" font-weight="700" fill="#0E2336" text-anchor="middle">Test &amp; measurement</text><text x="505" y="432" font-size="12" fill="#51617A" text-anchor="middle">timing · records · non-regression</text></svg><p class="diagram-caption">Closed-loop VHIL: a simulated fault drives sampled values to virtualised protection; the trip returns as GOOSE and the behaviour is measured end to end.</p></div></div>
-<div class="modal" id="modal-poc" role="dialog" aria-modal="true" aria-label="POC example diagram"><div class="modal-overlay" data-close></div><div class="modal-box"><button class="modal-close" data-close aria-label="Close">&#215;</button><h3>Example: a live network model, fed from the field</h3><svg viewBox="0 0 320 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Field data POC diagram"><defs><marker id="m-p1" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto"><path d="M0,0 L6,3.5 L0,7 Z" fill="#51617A"/></marker><marker id="m-p2" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto"><path d="M0,0 L6,3.5 L0,7 Z" fill="#0B7C71"/></marker><marker id="m-p3" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto"><path d="M0,0 L6,3.5 L0,7 Z" fill="#1E5A8A"/></marker></defs><rect x="10" y="10" width="104" height="66" rx="6" fill="#FFFFFF" stroke="#0E2336" stroke-width="1.6"/><line x1="46" y1="76" x2="78" y2="76" stroke="#0E2336" stroke-width="1.6"/><line x1="62" y1="76" x2="62" y2="82" stroke="#0E2336" stroke-width="1.6"/><line x1="40" y1="84" x2="84" y2="84" stroke="#0E2336" stroke-width="1.8" stroke-linecap="round"/><g stroke="#1E5A8A" stroke-width="1.4"><line x1="26" y1="56" x2="46" y2="30"/><line x1="46" y1="30" x2="72" y2="40"/><line x1="72" y1="40" x2="98" y2="26"/><line x1="72" y1="40" x2="90" y2="60"/><line x1="46" y1="30" x2="52" y2="58"/></g><g fill="#1E5A8A"><circle cx="26" cy="56" r="3.4"/><circle cx="46" cy="30" r="3.4"/><circle cx="72" cy="40" r="3.4"/></g><g fill="#11A294"><circle cx="98" cy="26" r="3.4"/><circle cx="90" cy="60" r="3.4"/><circle cx="52" cy="58" r="3.4"/></g><text x="62" y="102" font-size="9" fill="#51617A" text-anchor="middle">network model · notebook</text><line x1="152" y1="46" x2="120" y2="46" stroke="#51617A" stroke-width="1.6" marker-end="url(#m-p1)"/><text x="136" y="38" font-size="8.5" font-weight="650" fill="#51617A" text-anchor="middle">refresh</text><path d="M160 22 v46 a28 9 0 0 0 56 0 v-46" fill="#EAF0F7" stroke="#51617A" stroke-width="1.5"/><ellipse cx="188" cy="22" rx="28" ry="9" fill="#EFF3F7" stroke="#51617A" stroke-width="1.5"/><ellipse cx="188" cy="38" rx="28" ry="9" fill="none" stroke="#8A97A8" stroke-width="1"/><ellipse cx="188" cy="54" rx="28" ry="9" fill="none" stroke="#8A97A8" stroke-width="1"/><text x="188" y="102" font-size="9" fill="#51617A" text-anchor="middle">live database</text><line x1="248" y1="26" x2="222" y2="36" stroke="#0B7C71" stroke-width="1.6" marker-end="url(#m-p2)"/><rect x="252" y="14" width="60" height="22" rx="11" fill="#E7F6F4" stroke="#0B7C71" stroke-width="1.3"/><text x="282" y="29" font-size="9.5" font-weight="700" fill="#0B7C71" text-anchor="middle">IEC 61850</text><line x1="248" y1="66" x2="222" y2="58" stroke="#1E5A8A" stroke-width="1.6" marker-end="url(#m-p3)"/><rect x="252" y="56" width="60" height="22" rx="11" fill="#EAF0F7" stroke="#1E5A8A" stroke-width="1.3"/><text x="282" y="71" font-size="9.5" font-weight="700" fill="#1E5A8A" text-anchor="middle">IEC 104</text></svg><p class="diagram-caption">Example POC: field data over IEC 61850 and IEC 104 feeds a live database and refreshes a network model in a notebook.</p></div></div>
-</main><footer><div class="wrap foot"><p><strong>VOLTIGRID</strong> · Digital substation · Virtualised PAC · IT/OT validation</p><p><a href="https://voltigrid.com">voltigrid.com</a> · <a href="mailto:contact@voltigrid.com">contact@voltigrid.com</a></p></div></footer>
-<script>(function(){document.querySelectorAll('[data-modal]').forEach(function(btn){btn.addEventListener('click',function(){var modal=document.getElementById(btn.getAttribute('data-modal'));if(modal){modal.classList.add('open');document.body.style.overflow='hidden';}})});function closeAll(){document.querySelectorAll('.modal.open').forEach(function(modal){modal.classList.remove('open')});document.body.style.overflow='';}document.querySelectorAll('[data-close]').forEach(function(el){el.addEventListener('click',closeAll)});document.addEventListener('keydown',function(event){if(event.key==='Escape')closeAll();});})();</script>
+
+  <!-- ================= HERO ================= -->
+  <div class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Independent expertise · Substation protection, automation &amp; control</span>
+      <h1>Evaluate the digitalisation and <span class="accent">virtualisation</span> of your control and protection, with the rigour it demands.</h1>
+      <p>VOLTIGRID helps transmission and distribution system operators assess what this technology brings, where its current limits are, and what it changes for an organisation built on the historical separation of IT and OT. Independent, hands-on, grounded in systems running in production.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Discuss your programme</a>
+        <a class="btn btn-ghost" href="#use-cases">See use cases</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= THREE DIMENSIONS ================= -->
+  <div class="dims">
+    <div class="wrap dims-grid">
+      <div class="dim">
+        <h3><span class="dot" style="background:var(--teal)"></span>Expertise &amp; arbitration</h3>
+        <p>Neutral evaluation of architectures, vendor claims and integrator proposals at the IT/OT boundary, where few organisations hold the competence internally.</p>
+      </div>
+      <div class="dim">
+        <h3><span class="dot" style="background:var(--blue)"></span>Proof by demonstration</h3>
+        <p>POCs and virtual test benches that turn open questions and hearsay into measured, documented answers before any field commitment.</p>
+      </div>
+      <div class="dim">
+        <h3><span class="dot" style="background:var(--copper)"></span>Organisation &amp; adoption</h3>
+        <p>Support for teams whose structure was built on the IT/OT separation, as the technology crosses that boundary and reshapes roles and responsibilities.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= THE CHALLENGE: ORG MAP ================= -->
+  <section id="challenge">
+    <div class="wrap">
+      <div class="sec-label">The challenge</div>
+      <h2>Digitalisation lands on an organisation built to keep IT and OT apart</h2>
+      <p class="sec-intro">When protection, automation and control go digital and virtual, the impact is not confined to one department. Questions open up across the whole organisation, and most of them have no natural owner.</p>
+
+      <div class="map-cta">
+        <p>Fifteen functions, one open question each: the impact map of digitalisation on a TSO organisation, drawn from the inside. It is the starting grid of an assessment.</p>
+        <button class="btn btn-primary" data-modal="modal-orgmap">Open the map</button>
+      </div>
+
+      <div class="modal" id="modal-orgmap" role="dialog" aria-modal="true" aria-label="Organisation impact map">
+        <div class="modal-overlay" data-close></div>
+        <div class="modal-box">
+          <button class="modal-close" data-close aria-label="Close">&#215;</button>
+          <div class="schema">
+        <h3>Where the questions land in a TSO organisation</h3>
+        <svg viewBox="0 0 1000 612" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of a TSO organisation in four groups, each function marked with a question raised by digitalisation, ending on the unowned Build to Run handover.">
+          <defs>
+            <marker id="ar-dn" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+              <path d="M0,0 L8,4.5 L0,9 Z" fill="#51617A"/>
+            </marker>
+          </defs>
+
+          <!-- Top banner -->
+          <rect x="280" y="12" width="440" height="56" rx="10" fill="#0B7C71"/>
+          <text x="500" y="36" font-size="14" font-weight="750" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">DIGITALISATION &amp; VIRTUALISATION</text>
+          <text x="500" y="56" font-size="12" fill="#D7F0EC" text-anchor="middle">of protection, automation and control</text>
+
+          <!-- Connectors to the four groups -->
+          <path d="M500 68 V92 H135 V116" fill="none" stroke="#51617A" stroke-width="1.6" marker-end="url(#ar-dn)"/>
+          <path d="M500 68 V92 H380 V116" fill="none" stroke="#51617A" stroke-width="1.6" marker-end="url(#ar-dn)"/>
+          <path d="M500 68 V92 H625 V116" fill="none" stroke="#51617A" stroke-width="1.6" marker-end="url(#ar-dn)"/>
+          <path d="M500 68 V92 H870 V116" fill="none" stroke="#51617A" stroke-width="1.6" marker-end="url(#ar-dn)"/>
+
+          <!-- ===== Panel 1: PLAN & FINANCE ===== -->
+          <rect x="20" y="124" width="230" height="400" rx="8" fill="#EFF3F7" stroke="#C9D5E2" stroke-width="1.4"/>
+          <rect x="20" y="124" width="230" height="32" rx="8" fill="#1E5A8A"/>
+          <rect x="20" y="140" width="230" height="16" fill="#1E5A8A"/>
+          <text x="135" y="145" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing=".8">PLAN &amp; FINANCE</text>
+
+          <rect x="30" y="168" width="210" height="76" rx="6" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="1.2"/>
+          <text x="42" y="190" font-size="12.5" font-weight="700" fill="#0E2336">Grid planning</text>
+          <text x="42" y="212" font-size="10" font-style="italic" fill="#51617A">The need sheet asks for a new bay.</text>
+          <text x="42" y="226" font-size="10" font-style="italic" fill="#51617A">Who asks for observability?</text>
+          <circle cx="240" cy="168" r="10" fill="#E0A030"/><text x="240" y="172.5" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">?</text>
+
+          <rect x="30" y="254" width="210" height="76" rx="6" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="1.2"/>
+          <text x="42" y="276" font-size="12.5" font-weight="700" fill="#0E2336">Asset management</text>
+          <text x="42" y="298" font-size="10" font-style="italic" fill="#51617A">The asset is healthy, and no longer fit.</text>
+          <text x="42" y="312" font-size="10" font-style="italic" fill="#51617A">Which renewal criterion catches that?</text>
+          <circle cx="240" cy="254" r="10" fill="#E0A030"/><text x="240" y="258.5" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">?</text>
+
+          <rect x="30" y="340" width="210" height="76" rx="6" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="1.2"/>
+          <text x="42" y="362" font-size="12.5" font-weight="700" fill="#0E2336">Regulation</text>
+          <text x="42" y="384" font-size="10" font-style="italic" fill="#51617A">CAPEX earns a return. OPEX is squeezed.</text>
+          <text x="42" y="398" font-size="10" font-style="italic" fill="#51617A">Where does a virtualised fleet sit?</text>
+          <circle cx="240" cy="340" r="10" fill="#E0A030"/><text x="240" y="344.5" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">?</text>
+
+          <rect x="30" y="426" width="210" height="76" rx="6" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="1.2"/>
+          <text x="42" y="448" font-size="12.5" font-weight="700" fill="#0E2336">Procurement</text>
+          <text x="42" y="470" font-size="10" font-style="italic" fill="#51617A">No SCL, no interop tests in the tender:</text>
+          <text x="42" y="484" font-size="10" font-style="italic" fill="#51617A">a 30-year lock-in signed at award?</text>
+          <circle cx="240" cy="426" r="10" fill="#E0A030"/><text x="240" y="430.5" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">?</text>
+
+          <!-- ===== Panel 2: DESIGN & BUILD ===== -->
+          <rect x="265" y="124" width="230" height="400" rx="8" fill="#EFF3F7" stroke="#C9D5E2" stroke-width="1.4"/>
+          <rect x="265" y="124" width="230" height="32" rx="8" fill="#B87333"/>
+          <rect x="265" y="140" width="230" height="16" fill="#B87333"/>
+          <text x="380" y="145" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing=".8">DESIGN &amp; BUILD</text>
+
+          <rect x="275" y="168" width="210" height="76" rx="6" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="1.2"/>
+          <text x="287" y="190" font-size="12.5" font-weight="700" fill="#0E2336">Engineering &amp; standards</text>
+          <text x="287" y="212" font-size="10" font-style="italic" fill="#51617A">What is not in the reference design</text>
+          <text x="287" y="226" font-size="10" font-style="italic" fill="#51617A">does not exist. Is virtualisation in it?</text>
+          <circle cx="485" cy="168" r="10" fill="#E0A030"/><text x="485" y="172.5" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">?</text>
+
+          <rect x="275" y="254" width="210" height="76" rx="6" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="1.2"/>
+          <text x="287" y="276" font-size="12.5" font-weight="700" fill="#0E2336">Protection &amp; control</text>
+          <text x="287" y="298" font-size="10" font-style="italic" fill="#51617A">Trip when needed, never when not:</text>
+          <text x="287" y="312" font-size="10" font-style="italic" fill="#51617A">who proves it for a virtualised relay?</text>
+          <circle cx="485" cy="254" r="10" fill="#E0A030"/><text x="485" y="258.5" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">?</text>
+
+          <rect x="275" y="340" width="210" height="76" rx="6" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="1.2"/>
+          <text x="287" y="362" font-size="12.5" font-weight="700" fill="#0E2336">Telecoms &amp; networks</text>
+          <text x="287" y="384" font-size="10" font-style="italic" fill="#51617A">Called in once the design is frozen.</text>
+          <text x="287" y="398" font-size="10" font-style="italic" fill="#51617A">Who sized the process bus and timing?</text>
+          <circle cx="485" cy="340" r="10" fill="#E0A030"/><text x="485" y="344.5" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">?</text>
+
+          <rect x="275" y="426" width="210" height="76" rx="6" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="1.2"/>
+          <text x="287" y="448" font-size="12.5" font-weight="700" fill="#0E2336">Projects &amp; PMO</text>
+          <text x="287" y="470" font-size="10" font-style="italic" fill="#51617A">A pilot exists. A fleet path does not.</text>
+          <text x="287" y="484" font-size="10" font-style="italic" fill="#51617A">Which gate decides the scale-up?</text>
+          <circle cx="485" cy="426" r="10" fill="#E0A030"/><text x="485" y="430.5" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">?</text>
+
+          <!-- ===== Panel 3: SYSTEMS & DATA ===== -->
+          <rect x="510" y="124" width="230" height="400" rx="8" fill="#EFF3F7" stroke="#C9D5E2" stroke-width="1.4"/>
+          <rect x="510" y="124" width="230" height="32" rx="8" fill="#7E4FB0"/>
+          <rect x="510" y="140" width="230" height="16" fill="#7E4FB0"/>
+          <text x="625" y="145" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing=".8">SYSTEMS &amp; DATA</text>
+
+          <rect x="520" y="168" width="210" height="76" rx="6" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="1.2"/>
+          <text x="532" y="190" font-size="12.5" font-weight="700" fill="#0E2336">Industrial IT (level 3)</text>
+          <text x="532" y="212" font-size="10" font-style="italic" fill="#51617A">Who owns the IT/OT gateway?</text>
+          <text x="532" y="226" font-size="10" font-style="italic" fill="#51617A">Nobody, until it blocks the project.</text>
+          <circle cx="730" cy="168" r="10" fill="#E0A030"/><text x="730" y="172.5" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">?</text>
+
+          <rect x="520" y="254" width="210" height="76" rx="6" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="1.2"/>
+          <text x="532" y="276" font-size="12.5" font-weight="700" fill="#0E2336">Cybersecurity</text>
+          <text x="532" y="298" font-size="10" font-style="italic" fill="#51617A">The rulebook predates virtualisation.</text>
+          <text x="532" y="312" font-size="10" font-style="italic" fill="#51617A">What does approving a hypervisor check?</text>
+          <circle cx="730" cy="254" r="10" fill="#E0A030"/><text x="730" y="258.5" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">?</text>
+
+          <rect x="520" y="340" width="210" height="76" rx="6" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="1.2"/>
+          <text x="532" y="362" font-size="12.5" font-weight="700" fill="#0E2336">Corporate IT</text>
+          <text x="532" y="384" font-size="10" font-style="italic" fill="#51617A">IT standards written for the office,</text>
+          <text x="532" y="398" font-size="10" font-style="italic" fill="#51617A">applied to the substation. Do they fit?</text>
+          <circle cx="730" cy="340" r="10" fill="#E0A030"/><text x="730" y="344.5" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">?</text>
+
+          <rect x="520" y="426" width="210" height="76" rx="6" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="1.2"/>
+          <text x="532" y="448" font-size="12.5" font-weight="700" fill="#0E2336">Data &amp; performance</text>
+          <text x="532" y="470" font-size="10" font-style="italic" fill="#51617A">Substation data streams in, every day.</text>
+          <text x="532" y="484" font-size="10" font-style="italic" fill="#51617A">Which use case actually consumes it?</text>
+          <circle cx="730" cy="426" r="10" fill="#E0A030"/><text x="730" y="430.5" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">?</text>
+
+          <!-- ===== Panel 4: OPERATE & MAINTAIN ===== -->
+          <rect x="755" y="124" width="230" height="400" rx="8" fill="#EFF3F7" stroke="#C9D5E2" stroke-width="1.4"/>
+          <rect x="755" y="124" width="230" height="32" rx="8" fill="#2A8560"/>
+          <rect x="755" y="140" width="230" height="16" fill="#2A8560"/>
+          <text x="870" y="145" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing=".8">OPERATE &amp; MAINTAIN</text>
+
+          <rect x="765" y="168" width="210" height="76" rx="6" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="1.2"/>
+          <text x="777" y="190" font-size="12.5" font-weight="700" fill="#0E2336">System operation</text>
+          <text x="777" y="212" font-size="10" font-style="italic" fill="#51617A">The control room learns of the project</text>
+          <text x="777" y="226" font-size="10" font-style="italic" fill="#51617A">at commissioning. Non-regression: how?</text>
+          <circle cx="975" cy="168" r="10" fill="#E0A030"/><text x="975" y="172.5" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">?</text>
+
+          <rect x="765" y="254" width="210" height="76" rx="6" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="1.2"/>
+          <text x="777" y="276" font-size="12.5" font-weight="700" fill="#0E2336">Field maintenance</text>
+          <text x="777" y="298" font-size="10" font-style="italic" fill="#51617A">Patching, versions, rollback in the field:</text>
+          <text x="777" y="312" font-size="10" font-style="italic" fill="#51617A">is software in the maintenance plan?</text>
+          <circle cx="975" cy="254" r="10" fill="#E0A030"/><text x="975" y="258.5" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">?</text>
+
+          <rect x="765" y="340" width="210" height="76" rx="6" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="1.2"/>
+          <text x="777" y="362" font-size="12.5" font-weight="700" fill="#0E2336">Skills &amp; training</text>
+          <text x="777" y="384" font-size="10" font-style="italic" fill="#51617A">The critical skills sit with two people</text>
+          <text x="777" y="398" font-size="10" font-style="italic" fill="#51617A">and a retirement date. Then what?</text>
+          <circle cx="975" cy="340" r="10" fill="#E0A030"/><text x="975" y="344.5" font-size="12" font-weight="800" fill="#FFFFFF" text-anchor="middle">?</text>
+
+          <!-- Drops to the handover strip -->
+          <line x1="135" y1="524" x2="135" y2="544" stroke="#8A97A8" stroke-width="1.4" stroke-dasharray="3 3"/>
+          <line x1="380" y1="524" x2="380" y2="544" stroke="#8A97A8" stroke-width="1.4" stroke-dasharray="3 3"/>
+          <line x1="625" y1="524" x2="625" y2="544" stroke="#8A97A8" stroke-width="1.4" stroke-dasharray="3 3"/>
+          <line x1="870" y1="524" x2="870" y2="544" stroke="#8A97A8" stroke-width="1.4" stroke-dasharray="3 3"/>
+
+          <!-- Build to Run handover -->
+          <rect x="20" y="544" width="965" height="56" rx="8" fill="#FDF3E3" stroke="#E0A030" stroke-width="1.6"/>
+          <circle cx="52" cy="572" r="12" fill="#E0A030"/><text x="52" y="577" font-size="14" font-weight="800" fill="#FFFFFF" text-anchor="middle">?</text>
+          <text x="520" y="567" font-size="13" font-weight="700" fill="#0E2336" text-anchor="middle">The Build to Run handover: the project team dissolves, operations was never consulted.</text>
+          <text x="520" y="586" font-size="11.5" fill="#51617A" text-anchor="middle">Nobody presides over this moment. It is where digital substation projects break.</text>
+        </svg>
+        <p class="schema-caption">Every question mark on this map is real, and none of them has a natural owner: the organisation was built on the separation of IT and OT, and the technology crosses it. Mapping these questions against your own organisation is where an assessment starts.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= USE CASES ================= -->
+  <section id="use-cases">
+    <div class="wrap">
+      <div class="sec-label">Use cases</div>
+      <h2>From open question to documented answer</h2>
+      <p class="sec-intro">Typical engagements. Each one is scoped in writing, with deliverables and a defined end state, before any work starts.</p>
+
+      <!-- ======== Modal: SEAPATH test bench loop ======== -->
+      <div class="modal" id="modal-testbench" role="dialog" aria-modal="true" aria-label="SEAPATH test bench diagram">
+        <div class="modal-overlay" data-close></div>
+        <div class="modal-box">
+          <button class="modal-close" data-close aria-label="Close">&#215;</button>
+          <div class="schema">
+        <h3>The SEAPATH test bench, closed loop</h3>
+        <svg viewBox="0 0 1000 460" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Closed-loop SEAPATH test bench: real-time grid simulation exchanges Sampled Values and GOOSE with virtualised protection over a redundant process bus, with end-to-end measurement.">
+          <defs>
+            <marker id="ar-blue" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+              <path d="M0,0 L8,4.5 L0,9 Z" fill="#1E5A8A"/>
+            </marker>
+            <marker id="ar-red" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+              <path d="M0,0 L8,4.5 L0,9 Z" fill="#C03A4E"/>
+            </marker>
+          </defs>
+
+          <!-- Real-time grid simulation -->
+          <rect x="50" y="60" width="270" height="168" rx="10" fill="#EAF0F7" stroke="#C9D5E2" stroke-width="1.5"/>
+          <text x="70" y="92" font-size="16" font-weight="700" fill="#0E2336">Real-time grid simulation</text>
+          <text x="70" y="114" font-size="12.5" fill="#51617A">Dynamic network model</text>
+          <text x="70" y="132" font-size="12.5" fill="#51617A">Faults · switching · degraded modes</text>
+          <polyline points="70,190 90,190 100,164 112,208 124,178 136,196 150,190 170,190 180,168 192,204 204,182 216,194 230,190 300,190"
+                    fill="none" stroke="#1E5A8A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- step 1: fault injected -->
+          <circle cx="50" cy="60" r="13" fill="#0E2336"/>
+          <text x="50" y="65" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">1</text>
+          <!-- step 5: breaker opens -->
+          <circle cx="320" cy="228" r="13" fill="#0E2336"/>
+          <text x="320" y="233" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">5</text>
+
+          <!-- SEAPATH server (stacked = redundant) -->
+          <rect x="688" y="60" width="270" height="176" rx="10" fill="#DCEEEB" stroke="#9CCFC8" stroke-width="1.5" transform="translate(8,8)"/>
+          <rect x="680" y="52" width="270" height="176" rx="10" fill="#E7F6F4" stroke="#0B7C71" stroke-width="1.8"/>
+          <text x="700" y="82" font-size="16" font-weight="700" fill="#0B7C71">SEAPATH real-time server</text>
+          <rect x="855" y="62" width="82" height="22" rx="11" fill="none" stroke="#0B7C71" stroke-width="1.2"/>
+          <text x="896" y="77" font-size="11" font-weight="650" fill="#0B7C71" text-anchor="middle">redundant</text>
+          <!-- VMs (colour = function) -->
+          <rect x="700" y="100" width="230" height="40" rx="6" fill="#C03A4E"/>
+          <text x="715" y="125" font-size="13.5" font-weight="650" fill="#FFFFFF">Protection · virtualised (VM)</text>
+          <rect x="700" y="150" width="230" height="34" rx="6" fill="#C77A1E"/>
+          <text x="715" y="172" font-size="13" font-weight="650" fill="#FFFFFF">Automation (VM)</text>
+          <text x="700" y="212" font-size="11.5" fill="#51617A" font-style="italic">real protection software, unmodified</text>
+          <!-- step 3: protection decides -->
+          <circle cx="680" cy="52" r="13" fill="#0E2336"/>
+          <text x="680" y="57" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">3</text>
+
+          <!-- Redundant process bus -->
+          <line x1="80" y1="296" x2="930" y2="296" stroke="#1E5A8A" stroke-width="3"/>
+          <line x1="80" y1="305" x2="930" y2="305" stroke="#1E5A8A" stroke-width="3" opacity="0.45"/>
+          <text x="505" y="288" font-size="12.5" font-weight="650" fill="#1E5A8A" text-anchor="middle">Redundant process bus · Sampled Values + GOOSE</text>
+
+          <!-- Drops to the bus -->
+          <line x1="185" y1="228" x2="185" y2="296" stroke="#51617A" stroke-width="1.8"/>
+          <rect x="180" y="291" width="10" height="10" fill="#1E5A8A"/>
+          <line x1="815" y1="236" x2="815" y2="296" stroke="#51617A" stroke-width="1.8"/>
+          <rect x="810" y="291" width="10" height="10" fill="#1E5A8A"/>
+
+          <!-- Flows along the bus -->
+          <line x1="230" y1="262" x2="770" y2="262" stroke="#1E5A8A" stroke-width="2" marker-end="url(#ar-blue)"/>
+          <text x="500" y="255" font-size="12.5" font-weight="650" fill="#1E5A8A" text-anchor="middle">Sampled Values (measurements)</text>
+          <circle cx="252" cy="262" r="12" fill="#0E2336"/>
+          <text x="252" y="266.5" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">2</text>
+
+          <line x1="770" y1="336" x2="230" y2="336" stroke="#C03A4E" stroke-width="2" marker-end="url(#ar-red)"/>
+          <text x="500" y="357" font-size="12.5" font-weight="650" fill="#C03A4E" text-anchor="middle">GOOSE (trip command)</text>
+          <circle cx="748" cy="336" r="12" fill="#0E2336"/>
+          <text x="748" y="340.5" font-size="11.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">4</text>
+
+          <!-- Test & measurement -->
+          <line x1="505" y1="305" x2="505" y2="386" stroke="#51617A" stroke-width="1.8" stroke-dasharray="4 4"/>
+          <rect x="385" y="386" width="240" height="60" rx="9" fill="#FDF3E3" stroke="#E0A030" stroke-width="1.6"/>
+          <text x="505" y="412" font-size="14.5" font-weight="700" fill="#0E2336" text-anchor="middle">Test &amp; measurement</text>
+          <text x="505" y="432" font-size="12" fill="#51617A" text-anchor="middle">timing · records · non-regression</text>
+        </svg>
+        <p class="schema-caption">
+          <span class="n">1</span> A fault is injected in the simulated network.
+          <span class="n">2</span> Measurements stream to the protection as Sampled Values.
+          <span class="n">3</span> The virtualised protection decides, in real time, on SEAPATH.
+          <span class="n">4</span> The trip command returns as a GOOSE message.
+          <span class="n">5</span> The breaker opens in the simulation. Behaviour and timing are recorded end to end: the loop is closed, and the evidence is on the table.
+        </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cards">
+
+        <div class="card" style="--card-accent:var(--teal)">
+          <div class="icon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2" y="4" width="22" height="14" rx="2" stroke="#0B7C71" stroke-width="1.8"/>
+              <polyline points="6,11 9,11 11,7 13,15 15,11 20,11" stroke="#11A294" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="9" y1="22" x2="17" y2="22" stroke="#51617A" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="13" y1="18" x2="13" y2="22" stroke="#51617A" stroke-width="1.8"/>
+            </svg>
+          </div>
+          <h3>Virtual test bench (VHIL)</h3>
+          <p>Real protection functions exercised against dynamic, real-time network scenarios: faults, topology changes, degraded modes. The behaviour of a virtualised protection chain is observed and measured, not assumed.</p>
+          <p class="use"><strong>Typical use:</strong> validating that a virtualised protection preserves timing and behaviour before qualification.</p>
+          <button class="card-link" data-modal="modal-testbench">View the test bench diagram &#8594;</button>
+        </div>
+
+        <div class="card" style="--card-accent:var(--blue)">
+          <div class="icon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="3" width="9" height="9" rx="1.5" stroke="#1E5A8A" stroke-width="1.8"/>
+              <rect x="14" y="3" width="9" height="9" rx="1.5" stroke="#1E5A8A" stroke-width="1.8"/>
+              <rect x="3" y="14" width="9" height="9" rx="1.5" stroke="#1E5A8A" stroke-width="1.8"/>
+              <rect x="14" y="14" width="9" height="9" rx="1.5" stroke="#11A294" stroke-width="1.8" fill="#EFF3F7"/>
+            </svg>
+          </div>
+          <h3>Remote virtual lab <span class="badge-soon">In development &#183; available soon</span></h3>
+          <p>A ready-to-use, SEAPATH-based environment available by subscription. Teams build familiarity with virtualised control and protection, run qualification campaigns and non-regression tests, without opening their own IT/OT perimeter.</p>
+          <p class="use"><strong>Typical use:</strong> building internal competence and testing vendor packages against a neutral reference.</p>
+          <button class="card-link" data-modal="modal-lab">View the lab diagram &#8594;</button>
+        </div>
+
+        <div class="card" style="--card-accent:var(--copper)">
+          <div class="icon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 22 L4 14 M10 22 L10 9 M16 22 L16 12 M22 22 L22 5" stroke="#B87333" stroke-width="2.2" stroke-linecap="round"/>
+              <path d="M3 24 L23 24" stroke="#51617A" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Assessment &amp; roadmap</h3>
+          <p>An independent evaluation of where a digitalisation or virtualisation programme actually stands: technology, competences, organisation. The outcome is a written diagnosis and a trajectory the programme owner can defend internally.</p>
+          <p class="use"><strong>Typical use:</strong> a programme that has been investigating for years without converging toward a decision.</p>
+          <button class="card-link" data-modal="modal-orgmap">View the organisation impact map &#8594;</button>
+        </div>
+
+        <div class="card" style="--card-accent:var(--amber)">
+          <div class="icon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="13" cy="13" r="9.5" stroke="#E0A030" stroke-width="1.8"/>
+              <circle cx="13" cy="13" r="4.5" stroke="#0B7C71" stroke-width="1.8"/>
+              <circle cx="13" cy="13" r="1.4" fill="#0E2336"/>
+            </svg>
+          </div>
+          <h3>POC demonstrator</h3>
+          <p>A targeted proof of concept combining virtualised protection, SEAPATH and network simulation, built to answer the specific questions blocking a decision. Scoped narrowly, delivered with the evidence documented.</p>
+          <div class="modal" id="modal-poc" role="dialog" aria-modal="true" aria-label="POC example diagram">
+            <div class="modal-overlay" data-close></div>
+            <div class="modal-box">
+              <button class="modal-close" data-close aria-label="Close">&#215;</button>
+              <h3>Example: a live network model, fed from the field</h3>
+          <div class="card-diagram">
+            <svg viewBox="0 0 320 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Field data arrives over IEC 61850 and IEC 104 into a live database that refreshes a network model in a notebook">
+              <defs>
+                <marker id="m-p1" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto"><path d="M0,0 L6,3.5 L0,7 Z" fill="#51617A"/></marker>
+                <marker id="m-p2" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto"><path d="M0,0 L6,3.5 L0,7 Z" fill="#0B7C71"/></marker>
+                <marker id="m-p3" markerWidth="7" markerHeight="7" refX="5.5" refY="3.5" orient="auto"><path d="M0,0 L6,3.5 L0,7 Z" fill="#1E5A8A"/></marker>
+              </defs>
+              <!-- computer screen with network model -->
+              <rect x="10" y="10" width="104" height="66" rx="6" fill="#FFFFFF" stroke="#0E2336" stroke-width="1.6"/>
+              <line x1="46" y1="76" x2="78" y2="76" stroke="#0E2336" stroke-width="1.6"/>
+              <line x1="62" y1="76" x2="62" y2="82" stroke="#0E2336" stroke-width="1.6"/>
+              <line x1="40" y1="84" x2="84" y2="84" stroke="#0E2336" stroke-width="1.8" stroke-linecap="round"/>
+              <!-- one-line network graph on screen -->
+              <g stroke="#1E5A8A" stroke-width="1.4">
+                <line x1="26" y1="56" x2="46" y2="30"/><line x1="46" y1="30" x2="72" y2="40"/>
+                <line x1="72" y1="40" x2="98" y2="26"/><line x1="72" y1="40" x2="90" y2="60"/>
+                <line x1="46" y1="30" x2="52" y2="58"/>
+              </g>
+              <g fill="#1E5A8A">
+                <circle cx="26" cy="56" r="3.4"/><circle cx="46" cy="30" r="3.4"/><circle cx="72" cy="40" r="3.4"/>
+              </g>
+              <g fill="#11A294">
+                <circle cx="98" cy="26" r="3.4"/><circle cx="90" cy="60" r="3.4"/><circle cx="52" cy="58" r="3.4"/>
+              </g>
+              <text x="62" y="102" font-size="9" fill="#51617A" text-anchor="middle">network model · notebook</text>
+              <!-- arrow from database to notebook -->
+              <line x1="152" y1="46" x2="120" y2="46" stroke="#51617A" stroke-width="1.6" marker-end="url(#m-p1)"/>
+              <text x="136" y="38" font-size="8.5" font-weight="650" fill="#51617A" text-anchor="middle">refresh</text>
+              <!-- database cylinder -->
+              <path d="M160 22 v46 a28 9 0 0 0 56 0 v-46" fill="#EAF0F7" stroke="#51617A" stroke-width="1.5"/>
+              <ellipse cx="188" cy="22" rx="28" ry="9" fill="#EFF3F7" stroke="#51617A" stroke-width="1.5"/>
+              <ellipse cx="188" cy="38" rx="28" ry="9" fill="none" stroke="#8A97A8" stroke-width="1"/>
+              <ellipse cx="188" cy="54" rx="28" ry="9" fill="none" stroke="#8A97A8" stroke-width="1"/>
+              <text x="188" y="102" font-size="9" fill="#51617A" text-anchor="middle">live database</text>
+              <!-- protocol inputs from the field -->
+              <line x1="248" y1="26" x2="222" y2="36" stroke="#0B7C71" stroke-width="1.6" marker-end="url(#m-p2)"/>
+              <rect x="252" y="14" width="60" height="22" rx="11" fill="#E7F6F4" stroke="#0B7C71" stroke-width="1.3"/>
+              <text x="282" y="29" font-size="9.5" font-weight="700" fill="#0B7C71" text-anchor="middle">IEC 61850</text>
+              <line x1="248" y1="66" x2="222" y2="58" stroke="#1E5A8A" stroke-width="1.6" marker-end="url(#m-p3)"/>
+              <rect x="252" y="56" width="60" height="22" rx="11" fill="#EAF0F7" stroke="#1E5A8A" stroke-width="1.3"/>
+              <text x="282" y="71" font-size="9.5" font-weight="700" fill="#1E5A8A" text-anchor="middle">IEC 104</text>
+            </svg>
+          </div>
+              <p class="schema-caption">Live substation and SCADA data arrive over IEC 61850 and IEC 104, land in a database, and refresh a network model in a notebook every few minutes. One example of a narrowly scoped POC: a working object, not a slide.</p>
+            </div>
+          </div>
+          <p class="use"><strong>Typical use:</strong> settling a disputed technical claim with a working demonstration instead of another study.</p>
+          <button class="card-link" data-modal="modal-poc">View an example &#8594;</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SCOPE ================= -->
+  <section class="scope" id="scope">
+    <div class="wrap">
+      <div class="sec-label">Scope</div>
+      <h2>What VOLTIGRID does not do</h2>
+      <div class="scope-grid">
+        <div class="scope-item">
+          <h3>No delivery</h3>
+          <p>VOLTIGRID does not develop or deliver the final solution. Delivery remains with your integrator; the role here is to evaluate, demonstrate and challenge.</p>
+        </div>
+        <div class="scope-item">
+          <h3>No decision ownership</h3>
+          <p>The engagements instruct a decision: they make it decidable. The GO itself, and the deployment that follows, remain yours.</p>
+        </div>
+        <div class="scope-item">
+          <h3>No vendor ties</h3>
+          <p>No commercial affiliation with any vendor or integrator. This independence is the basis of the neutrality the evaluations rely on.</p>
+        </div>
+      </div>
+      <p class="scope-note">Protection is not ordinary IT. Its safety cannot be formally proven; it is constructed, through iso-risk architectures and defence in depth. Where proof is out of reach, hands-on testing is what bounds the risk. This is the discipline the engagements are built on.</p>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-label">About</div>
+      <h2>Built by someone who has done it</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>VOLTIGRID is an independent, single-expert practice. The career behind it covers the full arc of the technology: system operation as a dispatcher, protection engineering, European studies on the impact of renewables on protection schemes, then the digitalisation and virtualisation of control and protection at RTE, the French transmission system operator.</p>
+          <p>Its founder co-initiated <strong>SEAPATH</strong>, the LF Energy open source real-time virtualisation platform on which RTE's in-service substation control systems now run, and launched the virtualisation work within <strong>R#SPACE</strong>, RTE's 100% digital, multi-vendor protection, automation and control programme.</p>
+          <p>Years spent alongside operators in Europe and beyond showed the same pattern everywhere: the technology is maturing faster than the competence and the organisation needed to evaluate it. VOLTIGRID exists to close that gap, from the outside, as a neutral party.</p>
+        </div>
+        <div class="track">
+          <h3>Track record</h3>
+          <ul>
+            <li>Co-initiator of SEAPATH (LF Energy)</li>
+            <li>Virtualisation lead within R#SPACE at RTE</li>
+            <li>Real-time Linux and software PLCs introduced into substation control</li>
+            <li>Protection engineering and renewables impact studies</li>
+            <li>Digital leadership and adoption programmes with operators worldwide</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <div class="sec-label">Contact</div>
+      <h2>Discuss how this applies to your programme</h2>
+      <div class="contact-grid">
+        <div class="contact-side">
+          <p>Whether your programme is at the exploration stage or has been investigating for some time, a short exchange is usually enough to see whether an engagement makes sense. No obligation follows from asking.</p>
+          <p class="direct">Direct email: <a href="mailto:contact@voltigrid.com">contact@voltigrid.com</a></p>
+        </div>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="988bedcc-d049-4e0f-9885-8eaca17a37b6">
+          <input type="hidden" name="subject" value="New enquiry via voltigrid.com">
+          <input type="hidden" name="from_name" value="voltigrid.com">
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <div class="row2">
+            <div class="field">
+              <label for="f-name">Name</label>
+              <input id="f-name" type="text" name="name" required autocomplete="name">
+            </div>
+            <div class="field">
+              <label for="f-org">Organisation</label>
+              <input id="f-org" type="text" name="organisation" autocomplete="organization">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-email">Email</label>
+            <input id="f-email" type="email" name="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="f-msg">Message</label>
+            <textarea id="f-msg" name="message" required placeholder="A few lines on your context and what you are trying to evaluate."></textarea>
+          </div>
+          <button type="submit">Send message</button>
+          <p class="form-note">Your message goes directly to contact@voltigrid.com. Nothing else is done with your data.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Modal: virtual lab ================= -->
+  <div class="modal" id="modal-lab" role="dialog" aria-modal="true" aria-label="Remote virtual lab diagram">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-box">
+      <button class="modal-close" data-close aria-label="Close">&#215;</button>
+      <div class="schema">
+        <h3>The remote virtual lab <span class="badge-soon">In development &#183; available soon</span></h3>
+        <svg viewBox="0 0 1000 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Your engineers reach a SEAPATH-based virtual lab through secure remote access and receive test evidence back, while your own IT/OT perimeter stays closed.">
+          <defs>
+            <marker id="ar-t" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+              <path d="M0,0 L8,4.5 L0,9 Z" fill="#0B7C71"/>
+            </marker>
+            <marker id="ar-s" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+              <path d="M0,0 L8,4.5 L0,9 Z" fill="#51617A"/>
+            </marker>
+          </defs>
+
+          <!-- Your side -->
+          <rect x="40" y="70" width="230" height="160" rx="10" fill="#EAF0F7" stroke="#C9D5E2" stroke-width="1.5"/>
+          <text x="60" y="102" font-size="16" font-weight="700" fill="#0E2336">Your engineers</text>
+          <text x="60" y="124" font-size="12.5" fill="#51617A">Protection, control, telecom,</text>
+          <text x="60" y="142" font-size="12.5" fill="#51617A">IT and cyber teams</text>
+          <!-- padlock: perimeter stays closed -->
+          <rect x="60" y="168" width="26" height="20" rx="4" fill="none" stroke="#51617A" stroke-width="1.8"/>
+          <path d="M65 168 v-6 a8 8 0 0 1 16 0 v6" fill="none" stroke="#51617A" stroke-width="1.8"/>
+          <text x="96" y="183" font-size="11.5" fill="#51617A">your IT/OT perimeter stays closed</text>
+
+          <!-- Secure remote access -->
+          <line x1="278" y1="120" x2="382" y2="120" stroke="#0B7C71" stroke-width="2" stroke-dasharray="6 5" marker-end="url(#ar-t)"/>
+          <text x="330" y="110" font-size="12" font-weight="650" fill="#0B7C71" text-anchor="middle">secure remote access</text>
+
+          <!-- Lab -->
+          <rect x="398" y="48" width="270" height="204" rx="10" fill="#DCEEEB" stroke="#9CCFC8" stroke-width="1.5" transform="translate(8,8)"/>
+          <rect x="390" y="40" width="270" height="204" rx="10" fill="#E7F6F4" stroke="#0B7C71" stroke-width="1.8"/>
+          <text x="410" y="70" font-size="16" font-weight="700" fill="#0B7C71">Virtual lab · SEAPATH based</text>
+          <rect x="560" y="50" width="90" height="22" rx="11" fill="none" stroke="#0B7C71" stroke-width="1.2"/>
+          <text x="605" y="65" font-size="11" font-weight="650" fill="#0B7C71" text-anchor="middle">subscription</text>
+
+          <rect x="410" y="88" width="230" height="40" rx="6" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="1.2"/>
+          <text x="425" y="113" font-size="13" font-weight="650" fill="#0E2336">Vendor package under test</text>
+          <rect x="410" y="138" width="230" height="40" rx="6" fill="#FFFFFF" stroke="#C9D5E2" stroke-width="1.2"/>
+          <text x="425" y="163" font-size="13" font-weight="650" fill="#0E2336">Neutral reference configuration</text>
+          <rect x="410" y="188" width="230" height="40" rx="6" fill="#FDF3E3" stroke="#E0A030" stroke-width="1.3"/>
+          <text x="425" y="213" font-size="13" font-weight="650" fill="#0E2336">Test tooling · capture · replay</text>
+
+          <!-- Evidence back -->
+          <line x1="382" y1="290" x2="278" y2="290" stroke="#51617A" stroke-width="2" marker-end="url(#ar-s)"/>
+          <line x1="525" y1="252" x2="525" y2="290" stroke="#51617A" stroke-width="1.8" stroke-dasharray="4 4"/>
+          <line x1="525" y1="290" x2="382" y2="290" stroke="#51617A" stroke-width="2"/>
+          <text x="430" y="316" font-size="12" font-weight="650" fill="#51617A">test reports · captures · non-regression evidence</text>
+
+          <!-- What it builds -->
+          <rect x="730" y="70" width="230" height="160" rx="10" fill="#EFF3F7" stroke="#C9D5E2" stroke-width="1.5"/>
+          <text x="750" y="102" font-size="15" font-weight="700" fill="#0E2336">What it builds</text>
+          <text x="750" y="128" font-size="12.5" fill="#51617A">Hands-on familiarity</text>
+          <text x="750" y="148" font-size="12.5" fill="#51617A">Qualification campaigns</text>
+          <text x="750" y="168" font-size="12.5" fill="#51617A">Vendor claims, tested</text>
+          <text x="750" y="188" font-size="12.5" fill="#51617A">A permanent validation</text>
+          <text x="750" y="204" font-size="12.5" fill="#51617A">environment for deployment</text>
+          <line x1="668" y1="142" x2="722" y2="142" stroke="#51617A" stroke-width="1.8" marker-end="url(#ar-s)"/>
+        </svg>
+        <p class="schema-caption">The lab runs on VOLTIGRID's side: nothing to install, no perimeter to open, offered by subscription. Teams work hands-on against a neutral reference, and every campaign leaves written evidence behind. Currently in development; early interest is welcome and shapes the priorities.</p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <p><strong>VOLTIGRID</strong> · Digitalisation &amp; virtualisation of substation protection, automation and control</p>
+    <p><a href="https://voltigrid.com">voltigrid.com</a> · <a href="mailto:contact@voltigrid.com">contact@voltigrid.com</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.querySelectorAll('[data-modal]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var m=document.getElementById(btn.getAttribute('data-modal'));
+      if(m){m.classList.add('open');document.body.style.overflow='hidden';}
+    });
+  });
+  function closeAll(){
+    document.querySelectorAll('.modal.open').forEach(function(m){m.classList.remove('open');});
+    document.body.style.overflow='';
+  }
+  document.querySelectorAll('[data-close]').forEach(function(el){el.addEventListener('click',closeAll);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeAll();});
+})();
+</script>
 </body>
 </html>
