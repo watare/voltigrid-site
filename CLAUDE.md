@@ -4,6 +4,13 @@ Ce dépôt se travaille en mode orchestrateur multi-agents BMAD. Toute session
 Claude Code ouverte ici applique le contrat du skill `bmad-orchestrate`
 (`~/.claude/skills/bmad-orchestrate/SKILL.md`), résumé ci-dessous.
 
+## Après une compaction
+
+Si le contexte de cette conversation a été résumé (compaction), ce fichier
+est le seul texte du contrat qui reste en mémoire. Relire en entier
+`~/.claude/skills/bmad-orchestrate/SKILL.md`, puis le brief
+d'orchestration, avant de reprendre le travail.
+
 ## Les deux règles
 
 1. **L'orchestrateur ne code jamais lui-même.** Il lit, décide, délègue à des
@@ -13,6 +20,36 @@ Claude Code ouverte ici applique le contrat du skill `bmad-orchestrate`
    distinct sans le contexte du dev, correctifs par un troisième agent,
    contre-vérification par un quatrième si une preuve close ou du code de
    production est touché.
+
+## Proportionner les moyens
+
+Résumé du texte CTO du 2026-09-02, section « Proportionner les moyens » de
+`bmad-orchestrate` : la skill garde le texte complet.
+
+- Avant d'ajouter un agent, un test, une revue ou un document, nomme le
+  risque ou l'incertitude qu'il couvre. Sans réponse précise, ne l'ajoute
+  pas.
+- La taille du diff ne décide pas du risque. Renforce la chaîne sur un
+  déclencheur concret : sécurité, permissions, argent, données, migration,
+  contrat public, large rayon d'impact, forte incertitude ou changement
+  difficile à annuler.
+- Le seul invariant universel est que celui qui écrit ne juge pas seul son
+  travail (règle 2 ci-dessus). Chaque agent de plus répond à une
+  incertitude distincte.
+- Pendant l'écriture, joue les contrôles que le changement touche. La
+  suite complète tourne une fois à la fusion. Une preuve de plus n'existe
+  que si un risque nommé la justifie.
+
+Choisis le plus petit changement réversible qui atteint complètement le
+but. Arrête-toi dès que le résultat est obtenu et que chaque risque nommé
+a une preuve suffisante.
+
+Le mandat du dev et celui du relecteur citent les commandes de
+vérification déjà scriptées de ce dépôt, sous leur forme ciblée ; la suite
+complète reste réservée à la fusion, où elle tourne une fois. Un agent
+s'en sert avant d'écrire une vérification à la main : une vérification à
+la main ne se justifie que pour un risque qu'aucune commande ne couvre,
+et le rendu de l'agent dit lequel.
 
 ## Modèles par rôle (paramètre model de l'outil Agent)
 
