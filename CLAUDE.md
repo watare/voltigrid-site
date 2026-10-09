@@ -15,8 +15,8 @@ branches `tache/<slug>`, jamais en commit direct sur `main`.
 
 ## Où vit l'information
 
-- `docs/README.md` : but, prochain jalon, index des docs, décisions.
-- Todoist, projet « Dev / voltigrid-site » : la liste des actions.
+- `docs/README.md` : but, prochain jalon, index des docs.
+- Todoist : la tâche « voltigrid-site » du projet « Voltigrid », ses sous-tâches sont les actions.
 - Ce fichier : les commandes de vérification.
 
 ## Commandes de vérification de ce projet
