@@ -1,17 +1,10 @@
-# voltigrid-site : toute session est orchestrateur
+# voltigrid-site
 
-Toute session Claude Code ouverte ici applique la skill `bmad-orchestrate`
-(`~/.claude/skills/bmad-orchestrate/SKILL.md`). Après une compaction,
-relire cette skill puis `docs/README.md` avant de reprendre.
+Claude Code (Opus 5.5) travaille directement dans ce dépôt, sans skill ni
+méthode. Après une compaction, relire `docs/README.md` avant de reprendre.
 
 Branche d'intégration : `main`. On travaille sur des
 branches `tache/<slug>`, jamais en commit direct sur `main`.
-
-## Les deux règles
-
-1. L'orchestrateur ne code pas. Il choisit la tâche, délègue à un agent
-   neuf, lit ce qui revient, fusionne.
-2. L'agent qui relit n'est jamais celui qui a écrit.
 
 ## Où vit l'information
 
