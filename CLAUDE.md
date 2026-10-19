@@ -3,8 +3,8 @@
 Claude Code (Opus 5.5) travaille directement dans ce dépôt, sans skill ni
 méthode. Après une compaction, relire `docs/README.md` avant de reprendre.
 
-Branche d'intégration : `main`. On travaille sur des
-branches `tache/<slug>`, jamais en commit direct sur `main`.
+On travaille directement sur `main`, sans branche (décision d'Aurélien du
+2026-10-19).
 
 ## Où vit l'information
 
@@ -16,7 +16,7 @@ branches `tache/<slug>`, jamais en commit direct sur `main`.
 
 Aucune commande scriptée : la page est statique, sans suite de tests. Les vérifications avant tout commit sont manuelles (`VOLTIGRID.md`, section 4) : relire la page, aucun secret privé dans le HTML, revendications produit cohérentes avec l'état réel (`STATUS.md` du dépôt chapeau). N'inventer aucune autre commande.
 
-Commits conventionnels en français, push après chaque tâche fusionnée.
+Commits conventionnels en français, push après chaque tâche terminée.
 
 ## Règles du projet
 
